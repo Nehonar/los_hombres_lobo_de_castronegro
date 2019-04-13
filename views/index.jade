@@ -1,0 +1,43 @@
+extends ./layout.jade
+block contenido
+    div(class="col-md-4")
+    div(class="col-md-4")
+        h1.text-center Users
+        .container
+            .table-responsive
+                table.table.table-border.table-hover(style="width:75%")
+                    thead.text-center
+                        tr.info
+                            th #
+                            th Username
+                            th Password
+                            th Email
+                            th Accion
+                
+                    tbody
+                        -var count = 1
+                        for i in users
+                            tr
+                                td= count++
+                                td= i.username
+                                td= i.email
+                                td= i.password
+                                td.text-center
+                                    input(type ="button" class="btn btn-danger" value="Delete User" onclick= "location.href='/delete?username=#{i.username}';")
+
+        hr
+        
+        form(action="/", method = "POST")
+            h1.text-center.big-top-space Add New User
+            
+            div
+                label(for="username") Username
+                input(type="text", name="username", placeholder="Your username...", id="username", class="form-control")
+            div
+                label(for="email") Email
+                input(type="text", name="email", placeholder="Your email...", id="uemail", class="form-control")
+            div
+                label(for="password") Password
+                input(type="text", name="password", placeholder="Password...", id="password", class="form-control")
+                div
+                input(type = "submit", value="Register" , class ="btn btn-info center-block")

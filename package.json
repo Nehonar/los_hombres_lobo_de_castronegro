@@ -1,0 +1,25 @@
+{
+  "name": "los_hombres_lobo_de_castronegro",
+  "version": "1.0.0",
+  "description": "los hombres lobo de castronegro the unofficial game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nehonar/los_hombres_lobo_de_castronegro.git"
+  },
+  "author": "Benitomar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nehonar/los_hombres_lobo_de_castronegro/issues"
+  },
+  "homepage": "https://github.com/Nehonar/los_hombres_lobo_de_castronegro#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jade": "^1.11.0",
+    "mongoose": "^5.5.1"
+  }
+}
